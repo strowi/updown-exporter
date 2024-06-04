@@ -9,7 +9,7 @@ jobs:
     name: updown-exporter
     runs-on: ubuntu-latest
     env:
-      REPO: dazwilkin/updown-exporter
+      REPO: strowi/updown-exporter
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -48,7 +48,7 @@ jobs:
       #     --annotations="version=${{ env.VERSION }}" \
       #     ghcr.io/${{ env.REPO }}:${{ github.sha }}
       #   env:
-      #     COSIGN_PASSWORD: ""          
+      #     COSIGN_PASSWORD: ""
       - name: Revise occurrences of the image
         run: |
           git config --local user.email "action@github.com"
